@@ -1,0 +1,554 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+body{
+    --background-color: rgba(245, 222, 179, 0.395);
+    background-color: rgba(245, 222, 179, 0.278);
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../resources/MOONRAISE/main.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+    position: relative;
+    /* z-index: 1;
+    width: 90%; */
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: goldenrod;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 40px;
+}
+
+.text-box p{
+    margin: 10px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero-btn:hover{
+    border: 1px solid goldenrod;
+    background-color: #daa520;
+    transition: 0.7s;
+    --color: black;
+    --font-weight: 500;
+}
+
+/* about */
+.about{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.about-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.about-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-col p{
+    padding: 0;
+}
+
+.about-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* image 앨범 */
+.album{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.album-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.album-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.album-col p{
+    padding: 0;
+}
+
+.album-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.row2{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.row3{
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+
+/* image */
+.image{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.image-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(218, 165, 32, 0.7);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 800;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+
+}
+
+/* location */
+.location{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.location h4{
+    text-align: center;
+}
+
+
+/* reservation */
+.reservation{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservation-col{
+    margin-top: 3%;
+    margin-bottom: 0%;
+    width: 31%;
+    /* background: rgba(243, 190, 55, 0.787); */
+    --background-color: rgb(251, 224, 224);
+    background-color: wheat;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.reservation-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+#reservation-popup{
+    text-decoration: none;
+}
+
+
+
+/* review */
+
+.review{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.review-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    --background: rgba(250, 242, 189, 0.437);
+    --background: rgba(255, 222, 179, 0.51);
+    background-color: #e2e2e29d;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.review-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.review-col p{
+    padding: 0;
+}
+
+.review-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.review-col .fa-solid{
+    color: red;
+}
+
+/* review2 */
+.review2-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    --background: rgba(250, 242, 189, 0.437);
+    --background: rgba(255, 222, 179, 0.51);
+    background-color: rgba(255, 218, 185, 0.691);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.review2-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.review2-col p{
+    padding: 0;
+}
+
+.review2-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.review2-col .fa-solid{
+    color: red;
+}
+
+
+/* event */
+
+.event{
+    margin-top: 0%;
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../resources/MOONRAISE/main.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 0%;
+}
+
+.event h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* scroll */
+.scrollToTop{
+    width:40px;
+    height: 40px;
+    background-image: url('../resources/MOONRAISE/');
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    display:none;
+    }
+
+/* instagram */
+.instagram{
+    display: center;
+    margin: auto;
+}
+
+.instagram>h1{
+    text-align: center;
+}
+
+.instagram{
+    width: 30%;
+    height: 30%;
+    box-sizing: border-box;
+}
+
+
+/* 자세히 알아보기 */
+/* animation */
+@keyframes blink{
+    from{
+        --background-color: tomato;
+        background-color: none;
+    }
+    to{
+        background-color: rgba(218, 165, 32, 0.612);
+    }
+}
+/* #about-btn{
+    color: black;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+} */
+
+.open-event p{
+    color: rgb(248, 92, 75);
+}
+
+
+/* 이미지 슬라이드 */
+#slider {
+    border-radius: 10px;
+    overflow:hidden;
+    position:relative;
+    border: 5px solid goldenrod;
+    --width:1440px;  /* 이미지 보여지는 뷰 부분 */
+    width: 80%;
+    height:230px;
+    --height: 40%;
+    left: 10%;
+    right: 10%;
+ }
+ .image-box {
+    width:5280px; 
+    height:40%;
+    display:flex;
+    margin: auto;
+    flex-wrap:nowrap;
+    animation: bannermove 20s linear infinite;
+ }
+ @keyframes bannermove {
+   0% {
+       transform: translate(0, 0);
+   }
+   100% {
+       transform: translate(-50%, 0);
+   }
+ }
+
+ .image-slide {
+    text-align: center;
+ }
+
+ .slider{
+    display: inline-block;
+ }
+
+ /* 네온사인 */
+ .neon {
+    animation: neon 1s ease infinite;
+    -moz-animation: neon 1s ease infinite;
+    -webkit-animation: neon 1s ease infinite;
+  }
+
+@keyframes neon{
+    0%, 100% {
+        text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16, 0 0 10vw #fa1c16, 0 0 .4vw #fed128, .5vw .5vw .1vw #806914;
+        color: #fed128;}
+        50% {
+            text-shadow: 0 0 .5vw #800e0b, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b, 0 0 5vw #800e0b, 0 0 .2vw #800e0b, .5vw .5vw .1vw #40340a;
+            color: #806914;
+        }
+
+}
+
+.flux {
+    animation: flux 1s linear infinite;
+    -moz-animation: flux 2s linear infinite;
+    -webkit-animation: flux 2s linear infinite;
+    -o-animation: flux 2s linear infinite;
+  }
+  
+  @keyframes flux {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+      color: #28D7FE;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+      color: #146C80;
+    }
+  }
+
+#home-btn{
+    text-decoration: none;
+    color: salmon;
+    font-weight: 500;
+}
+
+/* contact */
+.contact{
+    text-align: center;
+}
